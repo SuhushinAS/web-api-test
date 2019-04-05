@@ -1,6 +1,6 @@
 import history from 'app/browser-history.js';
 import configureStore from 'app/store.js';
-import Example from 'modules/example/containers/Example/index.jsx';
+import Example from 'modules/example/components/Example/index.jsx';
 import React from 'react';
 import {Provider} from 'react-redux';
 import {Redirect, Route, Switch} from "react-router";
