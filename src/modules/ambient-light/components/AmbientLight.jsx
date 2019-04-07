@@ -32,7 +32,7 @@ class AmbientLight extends Base {
 
   support = !!window.ondevicelight;
 
-  title = 'AmbientLight';
+  title = 'Ambient Light';
 
   /**
    * Вызывается сразу перед тем, как компонент будет удален из DOM.

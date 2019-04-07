@@ -1,6 +1,7 @@
 import history from 'app/browser-history.js';
 import AmbientLight from 'modules/ambient-light/components/AmbientLight.jsx';
-import Base from 'modules/common/components/Base.jsx';
+import BackgroundTasks from 'modules/background-tasks/components/BackgroundTasks.jsx';
+import Example from 'modules/example/components/Example.jsx';
 import Vibration from 'modules/vibration/components/Vibration.jsx';
 import React from 'react';
 import {Redirect, Route, Switch} from 'react-router';
@@ -10,13 +11,18 @@ import './style.css';
 const routeData = {
   'ambient-light': {
     component: AmbientLight,
-    name: 'AmbientLight',
+    name: 'Ambient Light',
     path: '/ambient-light',
   },
-  'base': {
-    component: Base,
-    name: 'Base',
-    path: '/base',
+  'background-tasks': {
+    component: BackgroundTasks,
+    name: 'Background Tasks',
+    path: '/background-tasks',
+  },
+  'example': {
+    component: Example,
+    name: 'Example',
+    path: '/example',
   },
   'vibration': {
     component: Vibration,

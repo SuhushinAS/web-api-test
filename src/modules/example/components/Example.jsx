@@ -1,26 +1,27 @@
+import Base from 'modules/common/components/Base.jsx';
 import React from 'react';
 
-class Example extends React.Component {
+class Example extends Base {
   /**
    * Значения свойств по-умолчанию.
    * https://facebook.github.io/react/docs/typechecking-with-proptypes.html
    */
   // static defaultProps = {};
 
+  support = true;
+
+  title = 'Example';
+
   /**
    * Конструктор компонента.
-   * @param {*} props Свойства переданые в компонент.
+   // * @param {*} props Свойства переданые в компонент.
    * @return {undefined}
    */
   // constructor(props) {
   //   super(props);
   // }
 
-  /**
-   * Вывести компонент.
-   * @return {*} Представление.
-   */
-  render() {
+  renderSupport() {
     return (
       <div>
         Example
