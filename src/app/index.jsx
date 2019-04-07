@@ -2,6 +2,7 @@ import history from 'app/browser-history.js';
 import AmbientLight from 'modules/ambient-light/components/AmbientLight.jsx';
 import BackgroundTasks from 'modules/background-tasks/components/BackgroundTasks.jsx';
 import Example from 'modules/example/components/Example.jsx';
+import BatteryStatus from 'modules/battery-status/components/BatteryStatus.jsx';
 import Vibration from 'modules/vibration/components/Vibration.jsx';
 import React from 'react';
 import {Redirect, Route, Switch} from 'react-router';
@@ -18,6 +19,11 @@ const routeData = {
     component: BackgroundTasks,
     name: 'Background Tasks',
     path: '/background-tasks',
+  },
+  'battery-status': {
+    component: BatteryStatus,
+    name: 'Battery Status',
+    path: '/battery-status',
   },
   'example': {
     component: Example,

@@ -33,7 +33,7 @@ class BackgroundTasks extends Base {
    * @return {undefined}
    */
   componentDidMount() {
-    requestIdleCallback(this.backgroundTask);
+    this.start();
   }
 
   backgroundTask = (deadline) => {
@@ -55,6 +55,12 @@ class BackgroundTasks extends Base {
     }
   };
 
+  start() {
+    if (this.support && 0 < this.state.list.length) {
+      requestIdleCallback(this.backgroundTask);
+    }
+  }
+
   process(item) {
     this.setState((state) => ({
       ...state,
@@ -73,9 +79,7 @@ class BackgroundTasks extends Base {
    * @return {undefined}
    */
   componentDidUpdate(props, state) {
-    if (0 < this.state.list.length) {
-      requestIdleCallback(this.backgroundTask);
-    }
+    this.start();
   }
 }
 
